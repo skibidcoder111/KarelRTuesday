@@ -2,7 +2,7 @@ require_relative "tcinq_robot.rb"
 
 
 def task()
- karel =TcinqRobot.new(3, 3, Robota::NORTH, 5) 
+ karel =TcinqRobot.new(3, 3, Robota::NORTH, 5)  
  karel.move_beeper 
 end
 

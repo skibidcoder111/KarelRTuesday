@@ -4,14 +4,9 @@
 
 $graphical = true
 
-require_relative "../karel/ur_robot"
+require_relative "stair_sweeper"
+require_relative "../karel/robota"
 
-# a task for a stair sweeper
-def task()
- 
-  karel = UrRobot.new(1, 1, Robota::EAST, 0)
-  
-end
 
 if __FILE__ == $0
   if $graphical
@@ -22,4 +17,16 @@ if __FILE__ == $0
    else
      task
    end
+end
+
+def move_beeper()
+  put_beeper
+  move
+  put_beeper
+  move
+  put_beeper
+  move
+  put_beeper
+  move
+  put_beeper
 end
