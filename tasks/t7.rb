@@ -1,7 +1,11 @@
+require_relative "tcinq_robot"
+
 def task ()
-	karel=TcinqRobot.new(2, 6, Robota::North, 0)
+	karel=TcinqRobot.new(2, 6, Robota::NORTH, 0)
 	world = Robota::World
-	world.read_world("t7monde.rb")
+	world.read_world("../karel/t7monde.rb")
+
+  karel.turn_right
 end
 
 
