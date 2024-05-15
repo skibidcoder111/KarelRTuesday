@@ -12,6 +12,7 @@ class TcinqRobot < UrRobot
   def initialize (street, avenue, direction, beepers)
     super(street, avenue, direction, beepers)
   end
+end
   
   
 def move_beeper()

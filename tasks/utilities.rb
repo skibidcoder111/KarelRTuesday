@@ -1,5 +1,6 @@
 
 require_relative "sensor_pack"
+require_relative "../mixins/turner"
 
 include SensorPack
 
@@ -85,7 +86,7 @@ include SensorPack
         	end
         end
 	end
-
+end
 
 
 
