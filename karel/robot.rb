@@ -7,8 +7,8 @@ require_relative 'ur_robot'
 # A class of robots that has sensing capabilities as well as actions. 
 class Robot < UrRobot
   def move
-  	super
-  	super
+  		super
+  		super
   end 
 end
 

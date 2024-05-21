@@ -1,17 +1,13 @@
 require_relative "../karel/robot.rb"
 
-class DeuxBlocRobot < Robot 
 	def task ()
-		karel =DeuxBlocRobot.new(1, 1, Robota::East, 0)
+		karel =Robot.new(1, 1, Robota::EAST, 0)
+		karel.move
 		karel.move
 		karel.turn_left
 		karel.move
-		karel.turn_right
-		karel.move
-		karel.turn_left
 		karel.move
 	end
-end
 
 
 
