@@ -85,6 +85,36 @@ include SensorPack
         		turn_right
         	end
         end
+	
+        def put5_beepers
+        	put_beeper
+        	move
+        	put_beeper
+        	move
+        	put_beeper
+        	move
+        	put_beeper
+        	move
+        	put_beeper
+        end
+		
+		def put3_beepers
+			put_beeper
+			move
+			put_beeper
+			move
+			put_beeper
+		end
+
+		def eprongs
+			move
+			put_beeper
+			move
+			put_beeper
+			turn_around
+			2.times {move}
+			turn_left
+		end
 	end
 end
 
