@@ -1,5 +1,5 @@
-require_relative "..karel/ur_robot"
-require_relative "../mixins/turner"
+require_relative "../karel/ur_robot.rb"
+require_relative "../mixins/turner.rb"
 require_relative "utilities.rb"
 
 
@@ -19,7 +19,7 @@ class Lettre < UrRobot
  			2.times {move}
  			turn_around
  			put5_beepers
-   		 end
+   		end
 	end
 
 	class LettreE < Lettre
@@ -62,3 +62,5 @@ class Lettre < UrRobot
 		end
 	end
 end
+
+
