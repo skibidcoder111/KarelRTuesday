@@ -1,8 +1,10 @@
 require_relative "../karel/ur_robot.rb"
-require_relative "sensorpack.rb"
+require_relative "sensor_pack.rb"
 require_relative "../mixins/turner"
 
-class T11classe < UrRobot
+class T10classe < UrRobot
+    include SensorPack
+    include Turner
     def sweep
         while front_is_clear?
             if next_to_a_beeper?
@@ -13,7 +15,7 @@ class T11classe < UrRobot
     end
 
     def reposition
-        if facing_east
+        if facing_east?
             turn_left
             if !front_is_clear?
                 turn_off
@@ -30,28 +32,33 @@ class T11classe < UrRobot
         end
     end
     def cornerbeeper
-        if facing_east
+        if facing_east?
             turn_right
-            unless front_is_clear?
-                put_beeper
+            if !front_is_clear?
+                turn_around
+               if !front_is_clear?
+                  put_beeper
+                  turn_right
+               else
+                  turn_right
+               end
+            else
+             turn_left
             end
-            turn_around
-            unless front_is_clear?
-                put_beeper
-            end
-            turn_right
         else
             turn_left
-            unless front_is_clear?
-                put_beeper
+            if !front_is_clear?
+                turn_around
+              if !front_is_clear?
+                  put_beeper
+                  turn_left
+              else
+                  turn_left
+               end
+            else
+             turn_right
             end
-            turn_around
-            unless front_is_clear?
-                put_beeper
-            end
-            turn_left
         end
-
     end
 end
 

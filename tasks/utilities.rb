@@ -116,7 +116,6 @@ include SensorPack
 			turn_left
 		end
 	end
-end
 
 
 
