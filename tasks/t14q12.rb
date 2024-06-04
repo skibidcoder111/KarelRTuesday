@@ -35,3 +35,5 @@ impaires = impaires.sort.reverse
 
 puts "valeurs paires: #{paires}"
 puts "valeurs impaires #{impaires}"
+
+
