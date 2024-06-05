@@ -1,3 +1,4 @@
+
 require_relative "sensor_pack"
 require_relative "../mixins/turner"
 
@@ -115,6 +116,7 @@ include SensorPack
 			turn_left
 		end
 	end
+end
 
 
 

@@ -5,20 +5,18 @@ def task
 	world = Robota::World
 	world.read_world("../worlds/aleatoire.kwld")
 
- 	loop do
-  	  karel.sweep
-  	  karel.cornerbeeper
-  	  karel.reposition
-  end
+    karel.sweep
+    karel.cornerbeeper
+    karel.reposition
 end
     
 if __FILE__ == $0
-  if $graphical
-     screen = window(20, 40) # (size, speed)
-     screen.run do
-       task
-     end
-   else
+    if $graphical
+      screen = window(10, 40)
+      screen.run do
+          task
+      end
+    else
      task
-   end
-end
+    end 
+end 
